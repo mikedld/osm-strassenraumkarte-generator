@@ -1,0 +1,12 @@
+[submodule "street_parking.py"]
+	path = street_parking.py
+	url = ../osm-street_parking.py.git
+	branch = portugal
+[submodule "strassenraumkarte-neukoelln"]
+	path = strassenraumkarte-neukoelln
+	url = ../osm-strassenraumkarte-neukoelln.git
+	branch = portugal
+[submodule "tile_writer"]
+	path = tile_writer
+	url = ../osm-tile_writer.git
+	branch = portugal
