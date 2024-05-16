@@ -103,6 +103,7 @@ os.environ["OSM_TILE_WRITER_START_Z"]                    = "15"
 os.environ["OSM_TILE_WRITER_END_Z"]                      = "21"
 os.environ["OSM_TILE_WRITER_STEP"]                       = "32"
 os.environ["OSM_TILE_WRITER_IMAGE_FORMAT"]               = "jpg"
+os.environ["OSM_TILE_WRITER_IMAGE_BG_COLOR"]             = "#ededed"
 
 os.environ.update({f"OSM_{k}": v for k, v in location_config.get("settings", {}).items()})
 
