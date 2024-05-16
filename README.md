@@ -26,7 +26,8 @@ config.json file contains a map of locations to their configuration, e.g. in its
 {
   "locations": {
     "foo": {
-      "bbox": [1, 2, 3, 4]
+      "bbox": [1, 2, 3, 4],
+      "crs": "EPSG:25829"
     }
   }
 }
