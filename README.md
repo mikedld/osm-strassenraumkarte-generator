@@ -36,7 +36,9 @@ Where
 
 * `foo` — location name, passed to the script via command line and injected into generated index.html file (if referenced in the template)
   * `bbox` — array of 4 floating-point numbers, two pairs of coordinates in EPSG:4326 (a.k.a. WGS 84), i.e. `[lat1, lon1, lat2, lon2]`
+  * `crs` — UTM CRS suitable for the bbox region
   * `settings` — optional map of overrides in case a particular step fails and is hard to fix
+  * `excludeLayers` — optional list of layers to exclude from rendering, in case rendering fails or takes a long time
 
 Inside of generate.py script file there's a number of `generate_*` variables that control whether a particular stage needs to be executed or not.
 There are setting variables in street_parking.py, post_processing.py, and tile_writer.py files as well, with some of them configurable in generate.py file via environment variables.
