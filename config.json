@@ -2,6 +2,7 @@
   "locations": {
     "Lisboa": {
       "bbox": [38.6894, -9.2492, 38.8171, -9.0855],
+      "crs": "EPSG:25829",
       "settings": {
         "STRASSENRAUMKARTE_PROC_WATER_BODY": "0"
       },
@@ -11,12 +12,14 @@
     },
     "Braga": {
       "bbox": [41.5335, -8.4406, 41.5687, -8.3861],
+      "crs": "EPSG:25829",
       "excludeLayers": [
         "trees forest crowns"
       ]
     },
     "Lisboa (Encarnação)": {
       "bbox": [38.76690, -9.12575, 38.78513, -9.10337],
+      "crs": "EPSG:25829",
       "excludeLayers": [
         "trees forest crowns"
       ]

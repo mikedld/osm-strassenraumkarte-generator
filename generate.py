@@ -70,7 +70,7 @@ tw_dir = this_dir / "tile_writer"
 
 output_dir = this_dir / "output" / location
 
-crs_to = "EPSG:25829"
+crs_to = location_config["crs"]
 
 os.environ["OSM_STRASSENRAUMKARTE_PROC_CROSSINGS"]       = "1"
 os.environ["OSM_STRASSENRAUMKARTE_PROC_CR_MARKINGS"]     = "1"
