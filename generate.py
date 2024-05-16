@@ -452,11 +452,15 @@ if generate_output:
     scale_factor = 1 / cos((bbox[0] + bbox[2]) / 2 * pi / 180)
     with ZipFile(srk_mapstyle_dir / "strassenraumkarte.qgz") as f:
         proj = f.read("strassenraumkarte.qgs").decode("utf-8")
-        Path(srk_mapstyle_dir / "strassenraumkarte.qgs").write_text(
-            proj
-                .replace("@scale_factor", f"{scale_factor}")
-                .replace("@project_folder", f"'{srk_mapstyle_dir}'")
-                .replace("25833", crs_to.split(":")[1]))
+        proj = (proj
+            .replace("@scale_factor", f"{scale_factor}")
+            .replace("@project_folder", f"'{srk_mapstyle_dir}'")
+            .replace("25833", crs_to.split(":")[1]))
+        for layer_name in location_config.get("excludeLayers", []):
+            proj = proj.replace(
+                f" checked=\"Qt::Checked\" name=\"{layer_name}\"",
+                f" checked=\"Qt::Unchecked\" name=\"{layer_name}\"")
+        Path(srk_mapstyle_dir / "strassenraumkarte.qgs").write_text(proj)
 
     from processing.core import Processing
     Processing.Processing.initialize()
